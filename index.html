@@ -38,13 +38,30 @@
       <video>"https://www.youtube.com/watch?v=3fSRKHZ0d8w"</video>
     </div>
 
-    <div style="display: flex;">
+    <!-- Top Bar (REQUIRES CUSTOMIZATION)-->
+    <div style="display: flex; justify-content: space-between;backdrop-filter: blur(10px); background-color: rgba(8, 124, 33, 0.25); color: #cad3ca; justify-content: space-between;">
       <p>
           NavOS_Web
       </p> 
       <p> 
           10/13/2026 7:05 PM
       </p>
+      <p>
+        id="timeElement"
+        style="">
+        time
+      </p>
     </div>
+
+    <script>
+      function updateTime(){
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime
+      }
+
+      setInterval(updateTime, 1000);
+
+    </script>
   </body>
 </html>
