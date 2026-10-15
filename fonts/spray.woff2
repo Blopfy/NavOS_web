@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "spray";
+  src: url("https://www.fontspace.com/stencil-ptx-sprayed-font-f157050") format("woff2");
+}
+
+.fancy-text {
+  font-family: "spray", sans-serif;
+}

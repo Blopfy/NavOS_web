@@ -39,7 +39,7 @@
     </div>
 
     <!-- Top Bar (REQUIRES CUSTOMIZATION)-->
-    <div style="display: flex; justify-content: space-between;backdrop-filter: blur(10px); background-color: rgba(8, 124, 33, 0.25); color: #cad3ca; justify-content: space-between;">
+    <div class="fancy-text" style="display: flex; font-family: '3d', serif; justify-content: space-between; backdrop-filter: blur(10px); background-color: rgba(4, 117, 29, 0.527); color: #000000; justify-content: space-between;">
       <p>
           NavOS_Web
       </p> 
@@ -60,7 +60,9 @@
         timeText.innerHTML = currentTime
       }
 
-      setInterval(updateTime, 1000);
+      setInterval(function currentTime(){
+        document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+      }, 1000);
 
     </script>
   </body>
